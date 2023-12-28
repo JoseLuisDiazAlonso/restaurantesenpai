@@ -1,0 +1,167 @@
+/*Damos formato al Header.*/
+.contenedor {
+    width: 100%;
+    background-color: #333030;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.titulo,
+.menu,
+.redesCesta,
+.logoJapon {
+    display: inline-flex;
+}
+
+.logoJapon {
+    margin-left: 10px;
+}
+
+.titulo h1 {
+    display: inline-flex;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'FuenteEscrituraMano', cursive;
+    margin-left: 30px;
+
+}
+
+.menu li {
+    display: inline-flex;
+    color: orangered;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    text-decoration: none;
+
+}
+
+.menu a {
+    color: red;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.redesCesta {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+.especialidades {
+    background-color: antiquewhite;
+}
+
+
+/*Colocalmos los div listaEspecialides y especialidadesMenu en linea.*/
+
+.listaEspecialidades,
+.especialidadesMenu {
+    display: inline-block;
+
+}
+
+/*Damos formato a los productos*/
+
+.especialidadesMenu {
+    /*Distribuimos todos los elementos del div producto.*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 400px;
+}
+
+.especialidadesMenu,
+.producto {
+    /*Vamos a colcar los producto en línea y centrado.*/
+    display: inline-block;
+
+}
+
+.producto {
+    max-width: auto;
+    display: inline-block;
+    margin-right: 80px;
+    margin-top: 40px;
+}
+
+.listaEspecialidades {
+    margin-right: 200px;
+    padding-top: 100px;
+    padding-block-end: 300px;
+    padding-right: 100px;
+    padding-left: 100px;
+    position: fixed;
+    /*Con position fixed y left 0 determinamos que la lista de menus
+    se ubique a la izquierde y se desplace con la página.*/
+    left: 0;
+}
+
+.listaEspecialidades a {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+.listaEspecialidades li {
+    /*Eliminamos el estilo de la lista.*/
+    list-style: none;
+    margin-top: 20px;
+}
+
+/*Damos formato a los h2*/
+
+h2 {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+p {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+
+}
+
+
+
+
+/*Damos formato al pie.*/
+
+.contenedor4 {
+    width: 100%;
+    background-color: #333030;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.pie a {
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 90px;
+    font-size: 20px;
+    color: red;
+    text-decoration: none;
+}
+
+.pie p {
+    font-size: 20px;
+    color: red;
+    display: inline-flex;
+    text-decoration: none;
+
+}
