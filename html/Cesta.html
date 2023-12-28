@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesta</title>
+    <link rel="stylesheet" href="../css/Cesta.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="contenedor">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3">
+
+                    <!--Logo del Restaurante-->
+
+                    <div class="logoJapon">
+                        <img src="../media/logoJapon.png" alt="Logo de Japon" height="90">
+                    </div>
+
+                    <div class="titulo">
+
+                        <h1>SENPAI</h1>
+
+                    </div>
+
+                    <!--Menú de la página web-->
+
+                    <div class="menu">
+                        <ul>
+                            <li><a href="Inicio.html">Inicio</a></li>
+                            <li><a href="Carta.html">Carta</a></li>
+                            <li><a href="Especialidades.html">Especialidades</a></li>
+                            <li><a href="MenuGrupos.html">Menú para Grupos</a></li>
+                            <li><a href="Reservas.html">Reservas</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Iconode la cesta de la Compra y redes Sociales-->
+
+                    <div class="redesCesta">
+                        <!--Creamos una div para la cesta de la compra-->
+                        <div id="cestaCompra">
+                            <a href="cesta.html"><img src="../media/LogoCompraTransparente.png"
+                                    alt="Logo de Cesta Compra" height="30" id="cesta"></a>
+                            <!--Añadimos el contador para que al seleccionar los productos se sumen a la cesta.-->
+                            <span id="cestaContador">0</span>
+                        </div>
+
+                        <a href="Facebook"><img src="../media/logoFacebook.png" alt="Logo Facebook" height="40"></a>
+                        <a href="Instagram"><img src="../media/logoInstagram.png" alt="Logo de Instagram"
+                                height="40"></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <h1>Cesta de Compra</h1>
+    <div class="cesta"></div>
+    <div class="totalCesta"></div>
+    <button class="vaciarCesta">Vaciar Cesta</button>
+    <button class="comprar">Comprar</button>
+
+    <script src="../js/cesta.js"></script>
+    
+    <!--Incluimos el script de EmailJs en la página html.-->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</body>
+
+</html>
