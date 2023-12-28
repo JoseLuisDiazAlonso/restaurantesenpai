@@ -1,0 +1,60 @@
+/*Damos el formato al header de la cesta.*/
+
+.contenedor {
+    width: 100%;
+    background-color: #333030;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo,
+.menu,
+.redesCesta,
+.logoJapon {
+    display: inline-flex;
+}
+
+.logoJapon {
+    margin-left: 10px;
+}
+
+.titulo h1 {
+    display: inline-flex;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'FuenteEscrituraMano', cursive;
+    margin-left: 30px;
+
+}
+
+.menu li {
+    display: inline-flex;
+    color: orangered;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    text-decoration: none;
+
+}
+
+.menu a {
+    color: red;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.redesCesta {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+/*Damos formato al menú de la cesta de la compra.*/
+
+.carrito {
+    display: none;
+}
