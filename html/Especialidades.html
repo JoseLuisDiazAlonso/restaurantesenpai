@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/Especialidades.css">
+    <title>Especialidades</title>
+</head>
+
+<body>
+
+    <!--Header-->
+
+    <header>
+        <div class="contenedor">
+            <div class="row">
+                <div class="col-xs-12 col-lg-3">
+
+                    <!--Logo del Restaurante-->
+
+                    <div class="logoJapon">
+                        <img src="../media/logoJapon.png" alt="Logo de Japon" height="90">
+                    </div>
+
+                    <div class="titulo">
+
+                        <h1>SENPAI</h1>
+
+                    </div>
+
+                    <!--Menú de la página web-->
+
+                    <div class="menu">
+                        <ul>
+                            <li><a href="Inicio.html">Inicio</a></li>
+                            <li><a href="Carta.html">Carta</a></li>
+                            <li><a href="Especialidades.html">Especialidades</a></li>
+                            <li><a href="MenuGrupos.html">Menú para Grupos</a></li>
+                            <li><a href="Reservas.html">Reservas</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Iconode la cesta de la Compra y redes Sociales-->
+
+                    <div class="redesCesta">
+                        <!--Creamos una div para la cesta de la compra-->
+                        <div id="cestaCompra">
+                            <a href="cesta.html"><img src="../media/LogoCompraTransparente.png"
+                                    alt="Logo de Cesta Compra" height="30"></a>
+                            <!--Añadimos el contador para que al seleccionar los productos se sumen a la cesta.-->
+                            <span id="cestaContador">0</span>
+                        </div>
+
+                        <a href="Facebook"><img src="../media/logoFacebook.png" alt="Logo Facebook" height="40"></a>
+                        <a href="Instagram"><img src="../media/logoInstagram.png" alt="Logo de Instagram"
+                                height="40"></a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Aquí van las especialidades.-->
+
+    <div class="contenedor2">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6">
+                <div class="especialidades">
+                    <div class="listaEspecialidades">
+                        <ul>
+                            <li><a href="#Sushi">SUSHI</a></li>
+                            <li><a href="#Niguiri">NIGIRI</a></li>
+                            <li><a href="#Ramen">RAMEN</a></li>
+                            <li><a href="#Postre">POSTRE</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Aquí va los diferentes productos del menu.-->
+
+                    <div class="especialidadesMenu">
+                        <h2 id="Sushi">SUSHI</h2>
+
+                        <div class="producto">
+                            <img src="../media/anguilaUramaki.jpg" alt="imagen de anguilaUramaki" height="100">
+                            <h2 class="productoSeleccionado">Anguila Uramaki</h2>
+                            <p>Aguacate envuelto de Anguila <br>
+                                Asada con salsa Anguila. Ocho Piezas.</p>
+                            <!--Añadimos los iconos de la presencia de alérgenos.-->
+                            <div class="alergenos">
+                                <img src="../media/logoAlergiaPescado.png" alt="Logo de cotenido de Pescado"
+                                    height="40">
+                                <img src="../media/logoAlergiaLacteos.png" alt="Logo de contenido de Lacteos"
+                                    height="40">
+                            </div>
+                            <p class="precio">10€</p>
+
+                            <!--Añadimos los botones para poder seleccionar la cantidad de unidades de los productos.-->
+                            <div class="cantidadProducto">
+
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/salmonUramaki.jpg" alt="Imagen de Salmón Uramaki" height="100">
+                            <h2 class="productoSeleccionado">Salmón Uramaki</h2>
+                            <p>Arroz y Aguacate envueltos <br>
+                                envueltos en salmón. Ocho Piezas</p>
+                            <div class="alergenos">
+                                <img src="../media/logoAlergiaPescado.png" alt="Imagen de Uramaki de Salmón"
+                                    height="40">
+                            </div>
+                            <p class="precio">8.95€</p>
+
+                            <div class="cantidadProducto">
+
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/Futomaki.jpg" alt="Imagen de Futomaki" height="100">
+                            <h2 class="productoSeleccionado">Futomaki</h2>
+                            <p>Pez Mantequilla, Salmón, Atún <br>
+                                Aguacate, Cangrejo y Pepino</p>
+                            <div class="alergenos">
+                                <img src="../media/ContieneGluten.png" alt="Imagen de contenido de Gluten" height="40">
+                                <img src="../media/Crustaceos.png" alt="Imagen de contenidor de Crustaceos" height="40">
+                                <img src="../media/logoAlergiaLacteos.png" alt="Imagén de contenido de lácteos"
+                                    height="40">
+                                <img src="../media/logoAlergiaPescado.png" alt="Imagen de contenido de Pescado"
+                                    height="40">
+                                <img src="../media/granosSesamo.png" alt="Imagen de contenido de Sésamo" height="40">
+                            </div>
+                            <p class="precio">11.60€</p>
+
+                            <div class="cantidadProducto">
+
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/makiSalmonQueso.jpg" alt="Imagen de Maki de Salmón con Queso"
+                                height="100">
+                            <h2 class="productoSeleccionado">Maki Salmón con Queso</h2>
+                            <p>Arroz envuelto con alga<br>
+                                Salmón y Queso.</p>
+                            <div class="alergenos">
+                                <img src="../media/ContieneGluten.png" alt="Imagen de contenido de Gluten" height="40">
+                                <img src="../media/Crustaceos.png" alt="Imagen de contenidor de Crustaceos" height="40">
+                                <img src="../media/logoAlergiaLacteos.png" alt="Imagén de contenido de lácteos"
+                                    height="40">
+                                <img src="../media/logoAlergiaPescado.png" alt="Imagen de contenido de Pescado"
+                                    height="40">
+
+                            </div>
+                            <p class="precio">5.55€</p>
+
+                            <div class="cantidadProducto">
+
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+
+                            </div>
+
+
+                        </div>
+
+                        <h2 id="Niguiri">NIGIRI</h2>
+
+                        <div class="producto">
+                            <img src="../media/nigiriAnquila.jpg" alt="Imagen de Nigiri Anquila" height="100">
+                            <h2 class="productoSeleccionado">Nigiri Anquila</h2>
+                            <p>Arroz envuelto con alga y Anguila.</p>
+                            <div class="alergenos">
+                                <img src="../media/ContieneGluten.png" alt="Intolerancia al Gluten" height="40">
+                                <img src="../media/logoAlergiaPescado.png" alt="Intolerancia al pescado" height="40">
+                                <img src="../media/granosSesamo.png" alt="Intolerancia al sésamo" height="40">
+                            </div>
+
+                            <p class="precio">4.50€</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/NigiriFlameado.jpg" alt="Imagen de Nigiri Flameado" height="100">
+                            <h2 class="productoSeleccionado">Nigiri Flameado</h2>
+                            <p>Arroz envuelto con alga y Salmón Flameado.</p>
+                            <div class="alergenos">
+                                <img src="../media/ContieneGluten.png" alt="Intolerancia al Gluten" height="40">
+                                <img src="../media/logoAlergiaPescado.png" alt="Intolerancia al pescado" height="40">
+                                <img src="../media/granosSesamo.png" alt="Intolerancia al sésamo" height="40">
+                            </div>
+
+                            <p class="precio">4.50€</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/Nigiri-lubina.jpg" alt="Imagen de Nigiri con Lubina" height="100">
+                            <h2 class="productoSeleccionado">Nigiri con Lubina</h2>
+                            <p>Arroz envuelto con alga y Lubina</p>
+
+                            <div class="alergenos">
+                                <img src="../media/logoAlergiaPescado.png" alt="Imagen de Intolerancia al pescado"
+                                    height="40">
+                                <img src="../media/ContieneGluten.png" alt="Imagen de Intolerancia al Glutén"
+                                    height="40">
+                                <img src="../media/granosSesamo.png" alt="Imagen de Contenido en Sesámo" height="40">
+                            </div>
+
+                            <p class="precio">5.95</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+                            </div>
+                        </div>
+
+                        <h2 id="Ramen">RAMEN</h2>
+
+                        <div class="producto">
+
+                            <img src="../media/RamenConPolloHuevo.jpg" alt="Imagen de Ramen con Pollo y Huevo"
+                                height="100">
+                            <h2 class="productoSeleccionado">Ramen con Pollo y Huevo</h2>
+                            <p>Delicioso Ramen con Pollo y Huevo al estilo Tradicional</p>
+
+                            <div class="alergenos">
+                                <img src="../media/Contienehuevo.png" alt="Imagen de contenido en Huevo" height="40">
+                                <img src="../media/ContieneGluten.png" alt="Imagen de Intolerancia al Gluten"
+                                    height="40">
+                            </div>
+
+                            <p class="precio">12.50</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/RamenMarisco.jpg" alt="Imagen de Ramen con Marisco" height="100">
+                            <h2 class="productoSeleccionado">Delicioso Ramen con Marisco al Estilo Tradicional</h2>
+
+                            <div class="alergenos">
+                                <img src="../media/Crustaceos.png" alt="Imagen de contenido en Crustaceos" height="40">
+                                <img src="../media/ContieneGluten.png" alt="Imagen de contenido en Gluten" height="40">
+                            </div>
+
+                            <p class="precio">12.60</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+                            </div>
+                        </div>
+
+                        <h2 id="Postre">POSTRE</h2>
+
+                        <div class="producto">
+
+                            <img src="../media/mochiChocolate.jpg" alt="Imagen de Mochi de Chocolate" height="100">
+                            <h2 class="productoSeleccionado">Mochi de mochiChocolate</h2>
+
+                            <div class="alergenos">
+                                <img src="../media/logoAlergiaLacteos.png" alt="Imagen de contenido en Lacteos"
+                                    height="40">
+                                <img src="../media/Contienehuevo.png" alt="Imagen de Contenido en Huevo" height="40">
+                            </div>
+
+                            <p class="precio">04.50</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+                            </div>
+
+
+                        </div>
+
+                        <div class="producto">
+                            <img src="../media/mochiVainilla.jpg" alt="Imagen de Mochi de Vainilla" height="100">
+                            <h2 class="productoSeleccionado">Mochi de Vainilla</h2>
+
+                            <div class="alergenos">
+                                <img src="../media/logoAlergiaLacteos.png" alt="Imagen de contenido de lácteos"
+                                    height="40">
+                                <img src="../media/Contienehuevo.png" alt="Imagen de contenido en Huevo" height="40">
+                            </div>
+                            <p class="precio">04.50</p>
+
+                            <div class="cantidadProducto">
+                                <button class="menos">-</button>
+                                <span class="cantidad_Producto">0</span>
+                                <button class="mas">+</button>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer>
+        <div class="contenedor4">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6">
+                    <div class="pie">
+                        <a href="PoliticadePrivacidad">Politica de Privacidad</a>
+                        <a href="AvisoLegal">Aviso Legal</a>
+                        <a href="PolíticadeCookies">Cookies</a>
+                        <p>Horario: De Martes a Domingo: 13:00h-01:00h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/especialidades.js"></script>
+
+
+</body>
+
+</html>
