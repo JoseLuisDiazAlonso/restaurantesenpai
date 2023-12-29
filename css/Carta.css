@@ -1,203 +1,75 @@
-/*Damos formato a la cabecera. Estará formada por un logo, un título, Un menú y enlaces a la cesta
-de la Compra y redes sociales.*/
+/*Le Damos formato al Header.*/
 
-.contenedor {
-    width: 100%;
+header {
+    /*Le damos color al fondo.*/
     background-color: #333030;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
-.titulo,
-.menu,
-.redesCesta,
-.logoJapon {
-    display: inline-flex;
+body {
+    background-color: bisque;
 }
 
-.logoJapon {
-    margin-left: 10px;
+/*Le damos formato al Header*/
+
+.logoJapon img {
+    margin-top: 20px;
+    /*Desplazamos el logo hacia abajo.*/
 }
+
+/*Le damos formato al título*/
 
 .titulo h1 {
-    display: inline-flex;
+    font-size: 70px;
+    font-weight: bolder;
     color: red;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: 'FuenteEscrituraMano', cursive;
-    margin-left: 30px;
-
 }
 
-.menu li {
-    display: inline-flex;
-    color: orangered;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
+/*Le damos formato al menú.*/
+
+.menu a,
+li {
     text-decoration: none;
-
-}
-
-.menu a {
+    list-style: none;
+    align-items: left;
     color: red;
-    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
-    text-decoration: none;
+   
 }
 
 .redesCesta {
     display: inline-flex;
-    margin-left: 10px;
 }
 
-/*Damos formato al menú de la cesta de la compra.*/
-
-.carrito {
-    display: none;
-}
-
-#cestaContador  {
+#cestaContador {
     color: red;
 }
 
+/*Ahora le damos formato al header para verlo en pantalla.*/
 
-/*Damos formato a la parte del Menú.*/
+@media screen and (min-width: 1025px) {
+
+    .contenedor { /*Centramos el contenido del contenedor*/
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logoJapon, .titulo, .redesCesta {
+        display: inline-flex; /*Le damos un formato en línea al logo, el título y los iconos de redes*/
+        margin-right: 150px;
+        margin-left: 150px;
+    }
+
+    /*Damos formato al menú*/
+
+    .menu li {
+        display: inline-flex;
+        margin-right: 100px;
+        margin-left: 70px;
+        font-size: 20px;
+    }
 
 
-.carta a {
-    color: rgba(9, 29, 247, 0.989);
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
+    
 }
 
-.carta h2 {
-    color: rgba(9, 29, 247, 0.989);
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-}
-
-/*Colocamos los dos div en la misma línea.*/
-
-/*Incluimos un fondo a las listas y le asignamos el lado izquierdo de la pantalla.*/
-.carta {
-    background-color: antiquewhite;
-}
-
-.listas {
-    margin-right: 200px;
-    padding-top: 100px;
-    padding-block-end: 300px;
-    padding-right: 100px;
-    position: fixed;
-    left: 0;
-}
-
-.listas,
-.secciones {
-    display: inline-block;
-}
-
-/*Establecemos una distancia entre los dos div.*/
-
-.secciones {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 400px;
-
-}
-
-/*Damos formato a los diferentes Productos.*/
-
-
-.producto {
-    max-width: auto;
-    display: inline-block;
-    margin-right: 100px;
-}
-
-.producto p {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    color: rgba(9, 29, 247, 0.989);
-    font-weight: bold;
-    text-align: center;
-
-}
-
-.producto img {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20px;
-}
-
-/*El precio lo marcamos como negrita para que se vea mejor.*/
-
-#precio {
-    font-weight: bold;
-    color: rgba(9, 29, 247, 0.989);
-}
-
-#precio p {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-/*Damos formato a los botones para determinar la cantidad de productos.*/
-
-.cantidadProducto,
-#precio {
-    display: block;
-}
-
-.mas,
-.menos {
-    width: 30px;
-    height: 30px;
-    border: none;
-    background-color: #ccc;
-    cursor: pointer;
-}
-
-/*Damos Formato al Footer*/
-
-.contenedor4 {
-    width: 100%;
-    background-color: #333030;
-    display: inline-flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
-.pie a {
-    margin-top: 0px;
-    margin-left: 50px;
-    margin-right: 90px;
-    font-size: 20px;
-    color: red;
-    text-decoration: none;
-}
-
-.pie p {
-    font-size: 20px;
-    color: red;
-    display: inline-flex;
-    text-decoration: none;
-
-}
-
-h3 {
-    color: rgba(9, 29, 247, 0.989);
-}
