@@ -12,43 +12,23 @@ body {
 
 @media screen and (min-width: 1025px) {
 
-    /*Centramos todos los elementos del header*/
-
-    .contenedor {
-        display: flex;
+    
+    .contenedor { /*Centramos el contenido del contenedor*/
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
-    /*Distribuimos en linea el Logo de Japón, el titulo, el menú y los icones de las redes.*/
-
-    .logoJapon,
-    .titulo,
-
-    .redesCesta {
-        display: inline-flex;
-        vertical-align: middle;
+    .logoJapon, .titulo, .redesCesta {
+        display: inline-flex; /*Le damos un formato en línea al logo, el título y los iconos de redes*/
+        margin-right: 150px;
+        margin-left: 150px;
     }
-
-    /*Damos formato y distribuimos a lo largo de la pantalla el título y los iconos de la cesta y de las redes.*/
-
-    .titulo h1 {
-        font-size: 40px;
-        font-weight: bolder;
-        margin-left: 480px;
-    }
-
-    .redesCesta {
-        margin-left: 500px;
-    }
-
-    /*Damos formato y distribuimos a lo largo de la pantalla el menú.*/
 
     .menu li {
         display: inline-flex;
-        justify-content: left;
-        margin-left: 100px;
-        margin-right: 70px;
+        margin-right: 100px;
+        margin-left: 70px;
         font-size: 20px;
     }
 
@@ -74,6 +54,13 @@ body {
 ul {
     list-style-type: none;
     /*Eliminamos los puntos de la lista.*/
+}
+
+
+
+
+#cestaContador {
+    color: red;
 }
 
 /*Vamos a dar formato a la Galería de fotos en la cual se irá pasando de una fotografía a otra.*/
@@ -280,7 +267,7 @@ una descripción del producto.*/
 
 .cartaMenu h2 {
     color: red;
-    text-align: center;
+    text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 
@@ -355,3 +342,40 @@ de sobremesa.*/
     }
 }
 
+/*Ahora le damos formato al pie.*/
+
+/*Distribuimos los enlaces en bloque para formato móvil y le damos al texto un color rojo
+eliminamos el formato de móvil.*/
+
+.pie a {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+
+}
+
+/*Ahora le damos formato al texto del footer.*/
+
+.pie p {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+/*Le damos formato de ordenador a la página.*/
+
+@media screen and (min-width: 1025px) {
+    .pie {
+        width: 100%;
+        display: inline-flex;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+
+    }
+
+
+}
