@@ -1,167 +1,185 @@
-/*Damos formato al Header.*/
-.contenedor {
-    width: 100%;
+body {
+    overflow-x: hidden;
+    /*Eliminamos el distanciamoiento lateral.*/
+    background-color: bisque;
+
+}
+
+/*Le Damos formato al Header.*/
+
+header {
+    /*Le damos color al fondo.*/
     background-color: #333030;
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+
 }
 
+/*Le damos formato al Header*/
 
-.titulo,
-.menu,
-.redesCesta,
-.logoJapon {
-    display: inline-flex;
+.logoJapon img {
+    margin-top: 20px;
+    /*Desplazamos el logo hacia abajo.*/
 }
 
-.logoJapon {
-    margin-left: 10px;
-}
+/*Le damos formato al título*/
 
 .titulo h1 {
-    display: inline-flex;
+    font-size: 70px;
+    font-weight: bolder;
     color: red;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: 'FuenteEscrituraMano', cursive;
-    margin-left: 30px;
-
 }
 
-.menu li {
-    display: inline-flex;
-    color: orangered;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
+/*Le damos formato al menú.*/
+
+.menu a,
+li {
     text-decoration: none;
-
-}
-
-.menu a {
+    list-style: none;
+    align-items: left;
     color: red;
-    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
-    text-decoration: none;
+
 }
 
 .redesCesta {
     display: inline-flex;
-    margin-left: 10px;
 }
 
-.especialidades {
-    background-color: antiquewhite;
+#cestaContador {
+    color: red;
 }
 
+/*Ahora le damos formato al header para verlo en pantalla de portatil y sobremesa.*/
 
-/*Colocalmos los div listaEspecialides y especialidadesMenu en linea.*/
+@media screen and (min-width: 1025px) {
 
-.listaEspecialidades,
-.especialidadesMenu {
-    display: inline-block;
+    .contenedor {
+        /*Centramos el contenido del contenedor*/
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-}
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        display: inline-flex;
+        /*Le damos un formato en línea al logo, el título y los iconos de redes*/
+        margin-right: 150px;
+        margin-left: 150px;
+    }
 
-/*Damos formato a los productos*/
+    /*Damos formato al menú*/
 
-.especialidadesMenu {
-    /*Distribuimos todos los elementos del div producto.*/
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-left: 400px;
-}
+    .menu li {
+        display: inline-flex;
+        margin-right: 100px;
+        margin-left: 70px;
+        font-size: 20px;
+    }
 
-.especialidadesMenu,
-.producto {
-    /*Vamos a colcar los producto en línea y centrado.*/
-    display: inline-block;
-
-}
-
-.producto {
-    max-width: auto;
-    display: inline-block;
-    margin-right: 80px;
-    margin-top: 40px;
-}
-
-.listaEspecialidades {
-    margin-right: 200px;
-    padding-top: 100px;
-    padding-block-end: 300px;
-    padding-right: 100px;
-    padding-left: 100px;
-    position: fixed;
-    /*Con position fixed y left 0 determinamos que la lista de menus
-    se ubique a la izquierde y se desplace con la página.*/
-    left: 0;
-}
-
-.listaEspecialidades a {
-    color: blue;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-.listaEspecialidades li {
-    /*Eliminamos el estilo de la lista.*/
-    list-style: none;
-    margin-top: 20px;
-}
-
-/*Damos formato a los h2*/
-
-h2 {
-    color: blue;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-
-}
-
-p {
-    color: blue;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
 
 
 }
 
+/*Damos formato a las listas*/
 
-
-
-/*Damos formato al pie.*/
-
-.contenedor4 {
-    width: 100%;
-    background-color: #333030;
+.menu li {
     display: inline-flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    margin-right: 100px;
+    margin-left: 70px;
+    font-size: 20px;
 }
+
+
+
+
+
+.listas a {
+text-decoration: none;
+}
+
+/*Le damos formato para tablet a las secciones y a la lista*/
+
+@media screen and (min-width:767px) {
+
+    body {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /*Vamos a colocar los div .listas y .secciones en línea y vamos a fijar el div .listas al scroll*/
+
+    .secciones {
+        display: block;
+        margin-left: 250px;
+
+    }
+
+    .listas {
+        position: fixed;
+        /*Fija el div .listas frente al scroll de la página.*/
+
+    }
+}
+
+/*Le damos formato para ordenador portatil y de sobremesa*/
+
+@media screen and (min-width:1025px) {
+
+    .secciones,
+    .producto {
+        display: inline-block;
+    }
+
+    .producto {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .listas {
+        position: fixed;
+    }
+}
+
+/*Ahora le damos formato al pie.*/
 
 .pie a {
-    margin-top: 0px;
-    margin-left: 50px;
-    margin-right: 90px;
-    font-size: 20px;
-    color: red;
+    width: 100%;
+    margin-top: 10px;
+    display: block;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+
+}
+
+/*Ahora le damos formato al footer.*/
+
+
+.pie {
+    background-color: #333030;
 }
 
 .pie p {
-    font-size: 20px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
     color: red;
-    display: inline-flex;
-    text-decoration: none;
+}
+
+/*Ahora le damos formato para ordenador portatil y de sobremesa al footer*/
+
+/*Le damos formato de ordenador a la página.*/
+
+@media screen and (min-width: 1025px) {
+    .pie {
+        width: 100%;
+        display: inline-flex;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+
+    }
+
 
 }
