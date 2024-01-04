@@ -1,12 +1,16 @@
+body {
+    overflow-x: hidden;
+    /*Eliminamos el distanciamoiento lateral.*/
+    background-color: bisque;
+
+}
+
 /*Le Damos formato al Header.*/
 
 header {
     /*Le damos color al fondo.*/
     background-color: #333030;
-}
 
-body {
-    background-color: bisque;
 }
 
 /*Le damos formato al Header*/
@@ -33,7 +37,7 @@ li {
     align-items: left;
     color: red;
     font-family: Arial, Helvetica, sans-serif;
-   
+
 }
 
 .redesCesta {
@@ -44,18 +48,22 @@ li {
     color: red;
 }
 
-/*Ahora le damos formato al header para verlo en pantalla.*/
+/*Ahora le damos formato al header para verlo en pantalla de portatil y sobremesa.*/
 
 @media screen and (min-width: 1025px) {
 
-    .contenedor { /*Centramos el contenido del contenedor*/
+    .contenedor {
+        /*Centramos el contenido del contenedor*/
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
-    .logoJapon, .titulo, .redesCesta {
-        display: inline-flex; /*Le damos un formato en línea al logo, el título y los iconos de redes*/
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        display: inline-flex;
+        /*Le damos un formato en línea al logo, el título y los iconos de redes*/
         margin-right: 150px;
         margin-left: 150px;
     }
@@ -70,6 +78,95 @@ li {
     }
 
 
-    
+
 }
 
+.listas a {
+    text-decoration: none;
+}
+
+/*Le damos formato para tablet a las secciones y a la lista*/
+
+@media screen and (min-width:767px) {
+
+    body {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /*Vamos a colocar los div .listas y .secciones en línea y vamos a fijar el div .listas al scroll*/
+
+    .secciones {
+        display: block;
+        margin-left: 250px;
+
+    }
+
+    .listas {
+        position: fixed;
+        /*Fija el div .listas frente al scroll de la página.*/
+
+    }
+}
+
+/*Le damos formato para ordenador portatil y de sobremesa*/
+
+@media screen and (min-width:1025px) {
+
+    .secciones,
+    .producto {
+        display: inline-block;
+    }
+
+    .producto {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .listas {
+        position: fixed;
+    }
+}
+
+/*Ahora le damos formato al pie.*/
+
+.pie a {
+    width: 100%;
+    margin-top: 10px;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+
+}
+
+/*Ahora le damos formato al footer.*/
+
+
+.pie {
+    background-color: #333030;
+}
+
+.pie p {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+/*Ahora le damos formato para ordenador portatil y de sobremesa al footer*/
+
+/*Le damos formato de ordenador a la página.*/
+
+@media screen and (min-width: 1025px) {
+    .pie {
+        width: 100%;
+        display: inline-flex;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+
+    }
+
+
+}
