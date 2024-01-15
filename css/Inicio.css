@@ -1,70 +1,52 @@
-/*Aplicamos fondo de color al body*/
+/*Damos formato al body.*/
 
 body {
-
-    background-color: #333030;
     overflow-x: hidden;
-
+    background-color: #333030;
 }
 
+/*Damos formato al Header en vista móvil*/
 
-
-/*Damos formato para vista del Header en Pc y tablet.*/
-
-@media screen and (min-width: 1025px) {
-
-    
-    .contenedor { /*Centramos el contenido del contenedor*/
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logoJapon, .titulo, .redesCesta {
-        display: inline-flex; /*Le damos un formato en línea al logo, el título y los iconos de redes*/
-        margin-right: 150px;
-        margin-left: 150px;
-    }
-
-    .menu li {
-        display: inline-flex;
-        margin-right: 100px;
-        margin-left: 70px;
-        font-size: 20px;
-    }
-
+.contenedor,
+.contenedor8 {
+    /*Centramos todos los elementos del Header*/
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
-/*Aplicamos estilos al título*/
+/*Damos formato a todos los elementos del menú.*/
 
-.titulo h1 {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
+.menu li,
+.menu ul {
+    /*Eliminamos los estilos de la lista. Y centramos los elementos al resto de la página.*/
+    list-style: none;
+    text-align: center;
+    margin-right: 25px;
+
 }
-
-/*Damos formato al menú*/
 
 .menu a {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
+    /*Eliminamos los estilos de los enlaces.*/
     text-decoration: none;
-    justify-content: left;
 }
 
-ul {
-    list-style-type: none;
-    /*Eliminamos los puntos de la lista.*/
+h1 {
+    color: red;
+    font-size: 50px;
+    font-weight: bolder;
 }
 
-
-
+a {
+    color: red;
+}
 
 #cestaContador {
+    /*La fuente del contador de la cesta será roja.*/
     color: red;
 }
 
-/*Vamos a dar formato a la Galería de fotos en la cual se irá pasando de una fotografía a otra.*/
+/*Vamos a darle formato a la Galeria de imágenes para que se vayan alternando las imágenes cada poco.*/
 
 .galeria {
     position: relative;
@@ -77,67 +59,37 @@ ul {
 .galeria img {
     position: absolute;
     object-fit: cover;
+    /*La Galería ocupará el ancho disponible de pantalla*/
     width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    /*Es el tiempo y tipo de transición de imágen.*/
 }
 
 .galeria img.active {
     opacity: 1;
 }
 
-/*Damos formato a la galeria en pantalla de Pc.*/
-
-@media screen and (min-width: 1025px) {
-    .galeria {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
-    }
-
-    .galeria img {
-        position: absolute;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .galeria img.active {
-        opacity: 1;
-    }
-
-}
-
-/*Damos formato a los textos Promocionales*/
+/*Damos Formato a los textos*/
 
 .textos {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
 
 }
 
-/*Damos formato a la vista desde Pc en el cual vamos a centrar el contenido.*/
+/*Vamos a dar formato a las Especialidades para que al pasar el cursor sobre la fotográfia se mostrará una descripción
+del producto.*/
 
-@media screen and (min-width: 1025px) {
-    .textos {
-        text-align: center;
-        margin-left: 500px;
-        margin-right: 500px;
-    }
-}
-
-/*Damos formato a la sección de Especialidades*/
-
-.especialidades h2 {
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+.contenedor6 {
+    width: 90vw;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*Damos formato a la sección de Especialidades.
@@ -177,159 +129,83 @@ una descripción del producto.*/
     padding: 10px;
 }
 
-/*Damos formato al enlace para especialidades.*/
+.especialidades h2 {
+    color: red;
+}
 
 .botonEspecialidades {
-    margin-top: 20px;
-    color: red;
-    font-family: Arial, Helvetica, sans-serif;
+    display: block;
     text-decoration: none;
-    justify-content: left;
 }
 
-/*Damos formato de las especialidades en vista ordenador.*/
+/*Ahora le damos formato a los botones de Carta y menú para Grupos*/
 
-@media screen and (min-width: 1025px) {
-
-    .contenedor6 {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-    .especialidades h2 {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-top: 40px;
-        margin-right: 520px;
-        margin-left: 520px;
-    }
-
-    .imagen-contenedor {
-        justify-content: center;
-        align-items: center;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
-    .imagen-contenedor {
-        position: relative;
-        display: inline-block;
-        margin-top: 10px;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        transition: opacity 0.7s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #fff;
-    }
-
-    .imagen-contenedor:hover .overlay {
-        opacity: 1;
-    }
-
-    .overlay h3,
-    .overlay p {
-        margin: 0;
-        padding: 10px;
-    }
-
-    .botonEspecialidades {
-        color: red;
-        width: 100%;
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        justify-content: left;
-        align-items: center;
-        margin-right: 580px;
-        margin-left: 580px;
-    }
-
+.contenedor7 {
+    /*Centramos todos los elementos del contenedor*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 }
-
-/*Vamos a darle formato al acceso, desde la página principal, a las especialidades y a la carta.*/
 
 .cartaMenu h2 {
     color: red;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-
 }
 
-/*Colocamos los botones de acceso a la carta y al menú dentro de las imágenes del logotipo del restaurante.*/
+/*Vamos a crear un efecto en el cual al pasar el ratón sobre la imágen de la carta la foto se agrande 
+y se de acceso a un enlace a la sección de carta y Menu para Grupos.*/
 
 
-/*Damos formato al enlace para que tenga una apariencia de botón.*/
+a img {
+    transition: 0.3s ease;
+}
 
-.botonCarta {
+.imagen-enlace {
+    position: relative;
     display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
-    /*Le añadimos un degradado al botón para que se vea mejor con respecto a la imagen superpuesta.*/
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    margin-left: 90px;
+    margin-top: 10px;
 }
 
-/*Repetimos la operación que hemos llevado a cabo con la imagen y el botón de la carta pero con el de Menú en Grupos.*/
-
-
-/*Damos formato al enlace para que tenga una apariencia de botón.*/
-
-.botonMenuGrupos {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
-    /*Le añadimos un degradado al botón para que se vea mejor con respecto a la imagen superpuesta.*/
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-    margin-left: 50px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 2.0s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 }
 
-/*Damos formato al contenedor7 para que la imagen y los botones se encuentren todos en bloque centrados con respecto al resto de elementos de la página en pantalla de ordenador portatil y
-de sobremesa.*/
+.imagen-enlace:hover .overlay {
+    opacity: 1;
+}
 
-@media screen and (min-width: 1025px) {
+.overlay a {
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+}
 
-    .contenedor7 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-left: 100px;
-        margin-right: 100px;
-    }
+/*Ahora le damos formato al pie*/
 
+.pie a {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*Le damos formato de tablet a la página.*/
+
+@media screen and (min-width:768px) {
     .carta {
         display: flex;
         align-items: center;
@@ -341,41 +217,68 @@ de sobremesa.*/
         align-items: center;
         justify-content: center;
     }
-}
-
-/*Ahora le damos formato al pie.*/
-
-/*Distribuimos los enlaces en bloque para formato móvil y le damos al texto un color rojo
-eliminamos el formato de móvil.*/
-
-.pie a {
-    width: 100%;
-    margin-top: 10px;
-    display: block;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
 
 }
 
-/*Ahora le damos formato al texto del footer.*/
+/*Ahora le damos formato para ordenador portatil y de sobremesa.*/
 
-.pie p {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-}
+@media screen and (min-width:1023px) {
 
-/*Le damos formato de ordenador a la página.*/
+    .logoJapon,
+    .titulo,
+    .redesCesta,
+    #cestaCompra {
+        display: inline-block;
+    }
 
-@media screen and (min-width: 1025px) {
-    .pie {
-        width: 100%;
-        display: inline-flex;
-        margin-top: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 
+
+
+    /*Damos formato a los elementos del menú.*/
+
+    .menu li {
+        /*Distribuimos en línea los elementos del menú.*/
+        display: inline-block;
+    }
+
+    /*Le damos un poco más de altura a la imágen pues en formato ordenador se ve un poco estrecha.*/
+
+    .galeria {
+        height: 350px;
+    }
+
+    .especialidades h2 {
+        /*Desplazamos para centrar el título h2*/
+        margin-left: 200px;
+
+    }
+
+    .imagen-contenedor img {
+        /*Establecemos una separación entre las diferentes imágenes.*/
+        margin-left: 100px;
+    }
+
+    .especialidades a {
+        /*Desplazamos el enlace a las Especialidades para centrarlo.*/
+        margin-left: 130px;
+    }
+
+    .imagen-enlace img {
+        /*Desplazamos el distanciamiento entre las imágenes para centrar más el contenido.*/
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .pie a {
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
     }
 
 
