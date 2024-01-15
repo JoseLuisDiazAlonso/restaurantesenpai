@@ -1,59 +1,91 @@
-//Daremos funcionalidad a los botones mas y menos.
+/**Vamos a dar función a los botones más y menos y a que actualice la cesta y la cantidad de productos seleccionados. */
 
-//Seleccionamos los botones mas y menos
+// Array para almacenar los productos seleccionados
+var productosSeleccionados = [];
 
-const botonMas = document.querySelectorAll(".mas");
-const botonMenos = document.querySelectorAll(".menos");
+// Función para actualizar el contador de la cesta
+function actualizarContadorCesta() {
+    var cestaContador = document.getElementById("cestaContador");
+    cestaContador.textContent = productosSeleccionados.length;
+}
 
-//Manejamos el evento del botón Mas.
+// Obtener todos los botones "más" y "menos"
+var botonesMas = document.querySelectorAll(".mas");
+var botonesMenos = document.querySelectorAll(".menos");
 
-botonMas.forEach(botonMas => {
-    botonMas.addEventListener("click", () => {
+// Agregar evento de clic a los botones "más" y "menos"
+botonesMas.forEach(function (botonMas, index) {
+    botonMas.addEventListener("click", function () {
+        var cantidadProducto = document.querySelectorAll(".cantidad_Producto")[index];
+        var precioProducto = document.querySelectorAll(".precio")[index];
+        var tipoProducto = document.querySelectorAll(".productoSeleccionado")[index].textContent;
 
-        //Obtenemos el elemento padre "producto".
-        const producto = botonMas.closest(".producto");
+        // Obtener la cantidad actual del producto
+        var cantidadActual = parseInt(cantidadProducto.textContent);
 
-        //Obtenemos el elemento cantidad del Producto.
-        const cantidadProducto = producto.querySelector(".cantidad_Producto");
-        //Obtenemos el valor actual de la cantidad de producto.
+        // Incrementar la cantidad
+        cantidadActual++;
 
-        let cantidad = parseInt(cantidadProducto.textContent);
+        // Actualizar la cantidad en el HTML
+        cantidadProducto.textContent = cantidadActual;
 
-        //Incrementamos la cantidad en 1.
+        // Crear un objeto con la cantidad, precio y tipo de producto
+        var productoSeleccionado = {
+            cantidad: cantidadActual,
+            precio: precioProducto.textContent,
+            tipo: tipoProducto
+        };
 
-        cantidad++;
+        // Agregar el objeto al array
+        productosSeleccionados.push(productoSeleccionado);
 
-        //Actualizamos el valor de la cantidad en el DOM.
+        //Guardamos la información del array en el local storage.
+        localStorage.setItem("productosSeleccionados", JSON.stringify(productosSeleccionados));
 
-        cantidadProducto.textContent = cantidad;
+        // Actualizar el contador de la cesta
+        actualizarContadorCesta();
     });
-
 });
 
-//Manejamos el evento del botón menos.
+botonesMenos.forEach(function (botonMenos, index) {
+    botonMenos.addEventListener("click", function () {
+        var cantidadProducto = document.querySelectorAll(".cantidad_Producto")[index];
 
-botonMenos.forEach(botonMenos => {
-    botonMenos.addEventListener("click", () => {
-        //Obtenemos el elemento padre "producto".
-        const producto = botonMenos.closest(".producto");
+        // Obtener la cantidad actual del producto
+        var cantidadActual = parseInt(cantidadProducto.textContent);
 
-        //Obtenemos el elemento cantidad del prodcuto.
+        // Verificar que la cantidad no sea menor a 0
+        if (cantidadActual > 0) {
+            // Decrementar la cantidad
+            cantidadActual--;
 
-        const cantidadProducto = producto.querySelector(".cantidad_Producto");
-        
-        //Obtenemos el valor actual de la cantidad de producto.
+            // Actualizar la cantidad en el HTML
+            cantidadProducto.textContent = cantidadActual;
 
-        let cantidad = parseInt(cantidadProducto.textContent);
+            // Eliminar el último producto seleccionado del array
+            productosSeleccionados.pop();
 
-        //Verificamos que la cantidad no sea menor a 0.
+            //Guardamos la información del array en el local storage.
+            localStorage.setItem("productosSeleccionados", JSON.stringify(productosSeleccionados));
 
-        if (cantidad > 0) {
-            //Decrementar la cantidad.
-            cantidad--;
-
-            //Actualizamos el valor de la cantidad del DOM.
-
-            cantidadProducto.textContent = cantidad;
+            // Actualizar el contador de la cesta
+            actualizarContadorCesta();
         }
     });
+});
+
+/**Recuperamos los elementos del localStorage al cargar la página.
+ * Así no se perderá la información al recargar o al pasar de páginas.
+ */
+window.addEventListener("load", function () {
+    var productosGuardados = localStorage.getItem("productosSeleccionados");
+    if (productosGuardados) {
+        productosSeleccionados = JSON.parse(productosGuardados);
+        // Actualizar la cantidad en el HTML y el contador de la cesta
+        productosSeleccionados.forEach(function (producto, index) {
+            var cantidadProducto = document.querySelectorAll(".cantidad_Producto")[index];
+            cantidadProducto.textContent = producto.cantidad;
+        });
+        actualizarContadorCesta();
+    }
 });
