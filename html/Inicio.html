@@ -33,10 +33,12 @@
                     <!--Icono de la cesta de la Compra y redes Sociales-->
 
                     <div class="redesCesta">
-                        <img src="../media/LogoCompraTransparente.png" alt="Logo de Cesta Compra" height="30"
-                            id="cesta">
-                        <!--Añadimos el contador a la cesta-->
-                        <span id="cestaContador">0</span>
+                        <!--Creamos una div para la cesta de la compra-->
+                        <div id="cestaCompra">
+                            <a href="cesta.html"><img src="../media/LogoCompraTransparente.png"
+                                    alt="Logo de Cesta Compra" height="30" id="cesta"></a>
+                        </div>
+
                         <a href="Facebook"><img src="../media/logoFacebook.png" alt="Logo Facebook" height="40"></a>
                         <a href="Instagram"><img src="../media/logoInstagram.png" alt="Logo de Instagram"
                                 height="40"></a>
@@ -121,7 +123,7 @@
                     </div>
 
                     <div class="imagen-contenedor">
-                        <img src="../media/Nigiri.avif" alt="Foto de Nigiri" height="200">
+                        <img src="../media/nigiri.jpg" alt="Foto de Nigiri" height="200">
                         <div class="overlay">
                             <h3>Nigiri</h3>
                             <p>Porciones de Arroz compactadas y modeladas a mano
@@ -150,9 +152,11 @@
 
                     </div>
 
+                    <a href="../html/Especialidades.html" class="botonEspecialidades">Especialidades</a>
+
+
                 </div>
 
-                <a href="../html/Especialidades.html" class="botonEspecialidades">Especialidades</a>
 
             </div>
         </div>
@@ -164,19 +168,26 @@
         <div class="row">
             <div class="col-xs-12 col-lg-12">
                 <div class="cartaMenu">
+
                     <h2>CONOCE NUESTRA CARTA Y MENUS EN GRUPO</h2>
 
-                    <div class="carta">
-                        <img src="../media/logoJapon.png" id="imagenCarta" alt="Fondo del Logo de la Empresa"
-                            height="300">
-                        <a href="Carta.html" class="botonCarta">Ver Carta</a>
+                    <!--Vamos a crear una imágen que funcione como botón para ir a la carta y al Menú en Grupos.-->
+                    <div class="imagen-enlace">
+                        <img src="../media/imágenCarta.jpg" alt="Imagen de carta de restaurante" height="200">
+
+                        <div class="overlay">
+                            <a href="Carta.html">CARTA</a>
+                        </div>
 
                     </div>
 
+                    <div class="imagen-enlace">
+                        <img src="../media/imágenCarta.jpg" alt="Imagen de carta de restaurante" height="200">
 
-                    <div class="menuGrupos">
-                        <img src="../media/logoJapon.png" alt="Fondo del logo de la Empresa" height="300">
-                        <a href="MenuGrupos.html" class="botonMenuGrupos">Ver Menu Grupos</a>
+                        <div class="overlay">
+                            <a href="MenuGrupos.html">MENU PARA GRUPOS</a>
+                        </div>
+
                     </div>
 
 
@@ -198,7 +209,6 @@
                         <a href="PoliticadePrivacidad">Politica de Privacidad</a>
                         <a href="AvisoLegal">Aviso Legal</a>
                         <a href="PolíticadeCookies">Cookies</a>
-                        <p>Horario: De Martes a Domingo: 13:00h-01:00h</p>
                     </div>
                 </div>
             </div>
