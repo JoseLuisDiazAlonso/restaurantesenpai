@@ -15,3 +15,4 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(cambiarImagen, 4000) //Marcamos el cambio de imagen cada 4 segundos
 
 });
+
