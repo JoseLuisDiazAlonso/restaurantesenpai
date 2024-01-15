@@ -1,21 +1,37 @@
 body {
+    width: 90vw;
     overflow-x: hidden;
     /*Eliminamos el distanciamoiento lateral.*/
-    background-color: bisque;
+    background: linear-gradient(45deg, #f48236, #e4742ad4);
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
 
 /*Le Damos formato al Header.*/
 
 header {
+    width: 90vw;
     /*Le damos color al fondo.*/
     background-color: #333030;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
+
+}
+
+.contenedor {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*Le damos formato al Header*/
 
 .logoJapon img {
+
     margin-top: 20px;
     /*Desplazamos el logo hacia abajo.*/
 }
@@ -23,7 +39,7 @@ header {
 /*Le damos formato al título*/
 
 .titulo h1 {
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bolder;
     color: red;
 }
@@ -34,9 +50,11 @@ header {
 li {
     text-decoration: none;
     list-style: none;
-    align-items: left;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: red;
     font-family: Arial, Helvetica, sans-serif;
+    margin-right: 25px;
 
 }
 
@@ -48,104 +66,54 @@ li {
     color: red;
 }
 
-/*Ahora le damos formato al header para verlo en pantalla de portatil y sobremesa.*/
+/*Vamos a darle formato a la lista de la carta y a la carta.*/
 
-@media screen and (min-width: 1025px) {
-
-    .contenedor {
-        /*Centramos el contenido del contenedor*/
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logoJapon,
-    .titulo,
-    .redesCesta {
-        display: inline-flex;
-        /*Le damos un formato en línea al logo, el título y los iconos de redes*/
-        margin-right: 150px;
-        margin-left: 150px;
-    }
-
-    /*Damos formato al menú*/
-
-    .menu li {
-        display: inline-flex;
-        margin-right: 100px;
-        margin-left: 70px;
-        font-size: 20px;
-    }
-
-
+.secciones {
+    width: 90vw;
+    background-color: #333030;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 
-/*Damos formato a las listas*/
-
-.menu li {
-    display: inline-flex;
-    margin-right: 100px;
-    margin-left: 70px;
-    font-size: 20px;
+.secciones h3,
+.secciones h2,
+.secciones p {
+    color: red;
 }
 
-
-
+.secciones span {
+    color: red;
+}
 
 
 .listas a {
-text-decoration: none;
+    text-decoration: none;
 }
 
-/*Le damos formato para tablet a las secciones y a la lista*/
-
-@media screen and (min-width:767px) {
-
-    body {
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    /*Vamos a colocar los div .listas y .secciones en línea y vamos a fijar el div .listas al scroll*/
-
-    .secciones {
-        display: block;
-        margin-left: 250px;
-
-    }
-
-    .listas {
-        position: fixed;
-        /*Fija el div .listas frente al scroll de la página.*/
-
-    }
+.listas ul,
+.listas li {
+    text-align: center;
+    list-style-position: inside;
+    /*Coloca los marcadores de lista dentro del área del texto*/
+    padding-left: 0;
+    margin-left: 0;
 }
 
-/*Le damos formato para ordenador portatil y de sobremesa*/
+.producto {
+    /*Como los productos quedan muy juntos unos con otros les añadimos un
+    distanciamiento superior.*/
 
-@media screen and (min-width:1025px) {
+    margin-top: 10px;
 
-    .secciones,
-    .producto {
-        display: inline-block;
-    }
-
-    .producto {
-        margin-left: 100px;
-        margin-top: 20px;
-    }
-
-    .listas {
-        position: fixed;
-    }
 }
+
 
 /*Ahora le damos formato al pie.*/
 
 .pie a {
-    width: 100%;
     margin-top: 10px;
     display: block;
     text-decoration: none;
@@ -159,27 +127,9 @@ text-decoration: none;
 
 .pie {
     background-color: #333030;
+    width: 90vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.pie p {
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-}
-
-/*Ahora le damos formato para ordenador portatil y de sobremesa al footer*/
-
-/*Le damos formato de ordenador a la página.*/
-
-@media screen and (min-width: 1025px) {
-    .pie {
-        width: 100%;
-        display: inline-flex;
-        margin-top: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
-
-    }
-
-
-}
