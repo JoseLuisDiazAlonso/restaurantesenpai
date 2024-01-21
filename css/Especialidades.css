@@ -133,3 +133,89 @@ li {
     text-align: center;
 }
 
+/*Ahora vamos a darle formato para ordenador de sobremesa y portatil.*/
+
+@media screen and (min-width:1023px) {
+
+    body {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    header {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .contenedor {
+        /*Centramos todos los elementos del contenedor.*/
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta,
+    #cestaCompra {
+        /*Alineamos todos los elementos del header.*/
+        display: inline-block;
+    }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        /*Establecemos la separación entre los diferentes elementos.*/
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    /*Le damos estilo a la sección de productos.*/
+
+    .contenedor2 {
+        /*Centramos todos los elementos del contenedor.*/
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .secciones,
+    .producto {
+        /*Colocamos el div de secciones y producto en línea.*/
+        display: inline-block;
+    }
+
+    .producto {
+        width: 75vw;
+        margin-left: 40px;
+    }
+
+    .listas {
+        /*Fijamos el div listas al scroll.*/
+        width: 25vw;
+        position: fixed;
+    }
+
+    .listas a {
+        color: red;
+        margin-left: 20px;
+    }
+
+    footer {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .pie a {
+        margin-left: 50px;
+       
+    }
+}
