@@ -123,10 +123,17 @@ una descripción del producto.*/
     opacity: 1;
 }
 
+.imagen-contenedor:hover {
+    transform: scale(1.2);
+}
+
 .overlay h3,
 .overlay p {
     margin: 0;
-    padding: 10px;
+    padding-left: 10px;
+    position: absolute;
+
+
 }
 
 .especialidades h2 {
@@ -259,21 +266,14 @@ a img {
 
     }
 
-    .imagen-contenedor img {
-        /*Establecemos una separación entre las diferentes imágenes.*/
-        margin-left: 100px;
+    .imagen-contenedor {
+        margin-left: 30px;
     }
 
-    .especialidades a {
-        /*Desplazamos el enlace a las Especialidades para centrarlo.*/
-        margin-left: 130px;
+    .imagen-contenedor h3 {
+        color: red;
     }
 
-    .imagen-enlace img {
-        /*Desplazamos el distanciamiento entre las imágenes para centrar más el contenido.*/
-        margin-left: 100px;
-        margin-right: 100px;
-    }
 
     .pie a {
         justify-content: center;
