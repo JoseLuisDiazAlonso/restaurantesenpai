@@ -1,17 +1,31 @@
-/*Vamos a darle estilo al cuerpo.*/
+/*Vamos a colocar una imagen de fondo que cubra todo el cuerpo y quede centrado el motivo.*/
 
 body {
-  background-image: url(../media/bonsaiFondoAmarillo.jpg);
-  /*Establecemos una imágen de fondo*/
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  /*Centramos la imágen más al centro de la pantalla.*/
-  image-rendering: auto;
-  /*Establecemos un renderizado de la imágen.*/
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  color: red;
+}
+
+.imagenFondo {
+  background: url(../media/bonsaiFondoAmarillo.jpg) center/cover no-repeat fixed;
+  height: 100vh;
+  width: 90vw;
+  position: center;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor,
+.contenedor2,
+.contenedor4 {
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 /*Vamos a darle formato al Header*/
@@ -23,6 +37,8 @@ body {
   align-items: center;
   justify-content: center;
   align-items: center;
+  margin-left: 30px;
+  margin-right: 10px;
 }
 
 
@@ -73,6 +89,8 @@ deberíamos de poder evitar el scroll lateral.*/
 .MenuGrupos {
   background-color: rgba(51, 48, 48, 0.9);
   padding: 20px;
+  margin-left: 30px;
+  margin-right: 10px;
 }
 
 .MenuGrupos h2 {
@@ -117,6 +135,8 @@ deberíamos de poder evitar el scroll lateral.*/
 .pie {
   background-color: rgba(51, 48, 48, 0.9);
   margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 10px;
 }
 
 .pie a {
@@ -144,6 +164,22 @@ deberíamos de poder evitar el scroll lateral.*/
   .menu li {
     /*Distribuimos los elementos del menú en línea.*/
     display: inline-block;
+  }
 
+  .contenedor {
+    /*Centramos el fondo del contenedor.*/
+    margin-left: 140px;
+    margin-right: 20px;
+  }
+
+  .MenuGrupos {
+    /*Cuadramos el contenedor del MenuGrupos*/
+    margin-left: 140px;
+    margin-right: 20px;
+  }
+
+  .pie {
+    margin-left: 140px;
+    margin-right: 20px;
   }
 }
