@@ -1,0 +1,153 @@
+/*Le damos formato al body. Centramos todos los elementos y añadimos un color de fondo.*/
+
+body {
+    width: 90vw;
+    overflow-x: hidden;
+    background-color: #333030;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*Le damos una distribución de bloque al header.*/
+
+.logoJapon,
+.titulo,
+.redesCesta {
+    display: block;
+
+}
+
+.titulo h1 {
+    color: red;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+.menu a {
+    text-decoration: none;
+    /*Eliminamos el formato del enlace.*/
+    color: red;
+}
+
+.menu li {
+    list-style: none;
+    /*Eliminamos el formato de la lista.*/
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+#tituloReserva {
+    color: red;
+}
+
+/*Vamos a darle formato al formulario.
+En formato móvil vamos a darle una estructura
+de bloque a todo el contenido del formulario.*/
+
+.formulario_reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.formulario_reserva input {
+    display: block;
+    margin: 10px auto;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+input {
+    border-radius: 10px;
+    /*Le damos a los input un aspecto redondeado y añadimos una sombra blanca.*/
+    box-shadow: 0 2px 4px rgba(249, 248, 248, 0.854);
+    text-align: center;
+}
+
+textarea {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(249, 248, 248, 0.854);
+}
+
+button {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(249, 248, 248, 0.854);
+}
+
+/*Damos formato al mapa*/
+
+#map {
+    width: 90vw;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 280px;
+
+}
+
+/*Ahora le damos formato al footer.*/
+
+.pie a {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: red;
+}
+
+/*Ahora le vamos a dar formato para monitor portatil y de sobremesa.*/
+
+@media screen and (min-width:1023px) {
+
+    /*Colocamos los elementos del Header en línea.*/
+
+    .logoJapon,
+    .titulo,
+    .redesCesta,
+    #cestaCompra {
+        display: inline-block;
+
+
+    }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        margin-left: 140px;
+        margin-right: 140px;
+    }
+
+    /*Distribuimos todos los elementos del menú en línea.*/
+
+    .menu li {
+        display: inline-block;
+    }
+
+    /*Ensanchamos los márgenes del fieldset.*/
+
+    .inputContainer {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    .posicion {
+        margin-left: 40px;
+        margin-right: 10px;
+    }
+
+
+}
