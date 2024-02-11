@@ -27,7 +27,13 @@ if (productosSeleccionados && productosSeleccionados.length > 0) {
 
 function actualizarContadorCesta() {
   var cestaContador = document.getElementById("cestaContador");
-  cestaContador.textContent = productosSeleccionados.length;
+  //Verificamos si el producto seleccionado es null antes de acceder a la propiedad
+  if (productosSeleccionados && productosSeleccionados.length) {
+    cestaContador.textContent = productosSeleccionados.length;
+  } else {
+    //si el producto seleccionado es null establece el contador en cero.
+    cestaContador.textContent = "0";
+  }
 }
 
 
@@ -98,6 +104,21 @@ var botonComprar = document.querySelector(".comprar");
 
 botonComprar.addEventListener("click", function () {
 
+  //Creamos una variable para todos los input de los diferentes campos.
+
+  let nombre = document.getElementById('nombre').value;
+  let apellidos = document.getElementById('apellidos').value;
+  let direccion = document.getElementById('direccion').value;
+  let numeroTarjeta = document.getElementById('numeroTarjeta').value;
+  let codigoSeguridad = document.getElementById('codigoSeguridad').value;
+
+  //Comprobamos que los campos estén cumplimentados.
+
+  if (nombre === '' || apellidos === '' || direccion === '' || numeroTarjeta === '' || codigoSeguridad === '') {
+    alert('Todos los campos deben de estar rellenos.');
+  }
+
+
   // Crear una variable para almacenar el contenido del mensaje
   var mensaje = "";
 
@@ -111,17 +132,20 @@ botonComprar.addEventListener("click", function () {
   }
 
   // Agregar el contenido del mensaje al objeto de datos del correo electrónico
-  emailjs.send('service_dpjipr5', 'template_k9992o3', {
+  emailjs.send('service_i3rqf7s', 'template_5xllz1p', {
     from_name: 'Nombre del vendedor',
     to_name: 'Nombre del comprador',
     to_email: 'restaurantesenpai@outlook.com',
+    nombre: nombre,
+    apellidos: apellidos,
+    direccion: direccion,
     message: mensaje
-  }, "tKBoRJXoSd-WmvPZo")
+  }, '_JHDOIA_jHwrIGHUc')
     .then(() => {
       console.log("mensaje enviado")
     })
-    .catch((eror) => {
-      console.log("error al enviar el mensaje")
+    .catch((error) => {
+      console.log("error al enviar el mensaje", error)
 
     })
 
