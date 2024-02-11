@@ -58,3 +58,17 @@
 .carrito {
     display: none;
 }
+
+.datosTarjeta,
+#numeroTarjeta,
+#codigoSeguridad,
+#nombre,
+#apellidos,
+#direccion {
+    display: block;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
