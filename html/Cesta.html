@@ -62,13 +62,27 @@
 
     </header>
     <h1>Cesta de Compra</h1>
+    <div class="datosTarjeta">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos">
+        <label for="direccion">Direccion</label>
+        <input type="text" id="direccion">
+        <label for="numeroTajeta">Numero Tarjeta</label>
+        <input type="text" id="numeroTarjeta">
+        <label for="codigoSeguridad">Codigo Seguridad</label>
+        <input type="text" id="codigoSeguridad">
+
+    </div>
     <div class="cesta"></div>
     <div class="totalCesta"></div>
+
     <button class="vaciarCesta">Vaciar Cesta</button>
-    <button class="comprar">Comprar</button>
+    <button class="comprar" id="btnComprar">Comprar</button>
 
     <script src="../js/cesta.js"></script>
-    
+
     <!--Incluimos el script de EmailJs en la página html.-->
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
