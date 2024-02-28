@@ -27,6 +27,24 @@
 
                     </div>
 
+                    <!--Iconode la cesta de la Compra y redes Sociales-->
+
+                    <div class="redesCesta">
+                        <!--Creamos una div para la cesta de la compra-->
+                        <div id="cestaCompra">
+                            <a href="cesta.html"><img src="../media/LogoCompraTransparente.png"
+                                    alt="Logo de Cesta Compra" height="30" id="cesta"></a>
+                            <!--Añadimos el contador para que al seleccionar los productos se sumen a la cesta.-->
+                            <span id="cestaContador">0</span>
+                        </div>
+
+                        <a href="https://www.facebook.com"><img src="../media/logoFacebook.png" alt="Logo Facebook"
+                                height="40"></a>
+                        <a href="https://www.Instagram.com"><img src="../media/logoInstagram.png"
+                                alt="Logo de Instagram" height="40"></a>
+                    </div>
+
+
                     <!--Menú de la página web-->
 
                     <div class="menu">
@@ -39,21 +57,8 @@
                         </ul>
                     </div>
 
-                    <!--Iconode la cesta de la Compra y redes Sociales-->
 
-                    <div class="redesCesta">
-                        <!--Creamos una div para la cesta de la compra-->
-                        <div id="cestaCompra">
-                            <a href="cesta.html"><img src="../media/LogoCompraTransparente.png"
-                                    alt="Logo de Cesta Compra" height="30" id="cesta"></a>
-                            <!--Añadimos el contador para que al seleccionar los productos se sumen a la cesta.-->
-                            <span id="cestaContador">0</span>
-                        </div>
 
-                        <a href="Facebook"><img src="../media/logoFacebook.png" alt="Logo Facebook" height="40"></a>
-                        <a href="Instagram"><img src="../media/logoInstagram.png" alt="Logo de Instagram"
-                                height="40"></a>
-                    </div>
 
 
                 </div>
@@ -63,23 +68,54 @@
     </header>
     <h1>Cesta de Compra</h1>
     <div class="datosTarjeta">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre">
-        <label for="apellidos">Apellidos</label>
-        <input type="text" id="apellidos">
-        <label for="direccion">Direccion</label>
-        <input type="text" id="direccion">
-        <label for="numeroTajeta">Numero Tarjeta</label>
-        <input type="text" id="numeroTarjeta">
-        <label for="codigoSeguridad">Codigo Seguridad</label>
-        <input type="text" id="codigoSeguridad">
+        <form action="submit" class="formulario">
+            <fieldset>
+
+                <div class="inputContainer">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+                </div>
+
+                <div class="inputContainer">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos">
+                </div>
+
+                <div class="inputContainer">
+                    <label for="direccion">Direccion</label>
+                    <input type="text" id="direccion">
+                </div>
+
+                <div class="inputContainer">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono">
+                </div>
+
+            </fieldset>
+
+        </form>
+
 
     </div>
     <div class="cesta"></div>
     <div class="totalCesta"></div>
 
-    <button class="vaciarCesta">Vaciar Cesta</button>
-    <button class="comprar" id="btnComprar">Comprar</button>
+    <button type="submit" class="vaciarCesta" id="btnVaciarCesta">Vaciar Cesta</button>
+    <button type="reset" class="comprar" id="btnComprar">Comprar</button>
+
+    <footer>
+        <div class="contenedor4">
+            <div class="row">
+                <div class="col-xs-12 col-lg-6">
+                    <div class="pie">
+                        <a href="../html/PoliticaPrivacidad.html">Politica de Privacidad</a>
+                        <a href="../html/AvisoLegal.html">Aviso Legal</a>
+                        <a href="../html/politicaCookies.html">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../js/cesta.js"></script>
 
