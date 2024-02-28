@@ -1,56 +1,48 @@
+/*Le damos al body un width de 90vw y un overflow-x hidden para evitar el scroll lateral.*/
+
+body {
+    width: 90vw;
+    overflow-x: hidden;
+}
+
 /*Damos el formato al header de la cesta.*/
 
 .contenedor {
-    width: 100%;
+    width: 90vw;
+    overflow-x: hidden;
     background-color: #333030;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+.logoJapon,
 .titulo,
-.menu,
-.redesCesta,
-.logoJapon {
-    display: inline-flex;
-}
+.redesCesta {
+    display: block;
 
-.logoJapon {
-    margin-left: 10px;
 }
 
 .titulo h1 {
-    display: inline-flex;
     color: red;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: 'FuenteEscrituraMano', cursive;
-    margin-left: 30px;
-
-}
-
-.menu li {
-    display: inline-flex;
-    color: orangered;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
-    text-decoration: none;
-
+    font-weight: bolder;
+    font-size: 50px;
 }
 
 .menu a {
-    color: red;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 10px;
     text-decoration: none;
+    /*Eliminamos el formato del enlace.*/
+    color: red;
 }
 
-.redesCesta {
-    display: inline-flex;
-    margin-left: 10px;
+.menu li {
+    list-style: none;
+    /*Eliminamos el formato de la lista.*/
+    margin-left: 20px;
+    margin-right: 60px;
 }
 
 /*Damos formato al menú de la cesta de la compra.*/
@@ -59,16 +51,108 @@
     display: none;
 }
 
+#cestaContador {
+    color: red;
+}
+
+/**Distribuimos los elementos de la cesta de compra */
+
 .datosTarjeta,
-#numeroTarjeta,
-#codigoSeguridad,
 #nombre,
 #apellidos,
 #direccion {
     display: block;
     margin-top: 10px;
+
+
 }
+
 
 button {
     margin-top: 10px;
+}
+
+/*Ahora le damos formato al pie*/
+
+.pie {
+    width: 90vw;
+    background-color: #333030;
+    overflow-x: hidden;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pie a {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: red;
+}
+
+/*Ahora le damos una formato para formato de ordenador portatil y de sobremesa.*/
+
+@media screen and (min-width: 1023px) {
+
+    /*Centramos todos los elementos del body*/
+
+    body {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*Establecemos los márgenes del Header*/
+
+    .contenedor {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta,
+    #cestaCompra {
+        display: inline-block;
+        margin-left: 100px;
+
+    }
+
+    .menu li {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /*Le damos formato al formulario.*/
+
+    .formulario {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    /*Le damos formato al footer*/
+
+    .pie {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+
+
+
+
+
+
 }
