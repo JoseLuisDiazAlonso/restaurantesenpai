@@ -104,6 +104,10 @@ una descripción del producto.*/
     margin-top: 10px;
 }
 
+.imagen-contenedor h3 {
+    color: red;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -134,6 +138,7 @@ una descripción del producto.*/
     margin: 0;
     padding-left: 10px;
     position: absolute;
+
 
 
 }
@@ -206,6 +211,7 @@ a img {
 
 .pie a {
     display: block;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
     text-align: center;
