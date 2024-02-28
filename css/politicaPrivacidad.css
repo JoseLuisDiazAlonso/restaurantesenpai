@@ -1,0 +1,108 @@
+/*Le damos formato de móvil*/
+
+/*Aplicamos un color de fondo.*/
+
+body {
+    overflow-x: hidden;
+    background-color: #333030;
+}
+
+/*Le damos estilo al header.*/
+
+.logoJapon,
+.titulo,
+.redesCesta {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo h1 {
+    color: red;
+    font-size: 50px;
+
+}
+
+.menu {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: red;
+    margin-right: 60px;
+}
+
+/*Ahora le damos formato a todo el contenido del texto*/
+
+.politicaPrivacidad {
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.politicaPrivacidad h2 {
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.politicaPrivacidad p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*footer*/
+
+.pie a {
+    display: block;
+    color: red;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Ahora le vamos a dar formato para ordenador portatil y ordenador de bandeja.*/
+
+@media screen and (min-width:1023px) {
+
+    .contenedor {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta,
+    #cestaCompra {
+        display: inline-block;
+
+    }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+    .menu li {
+        display: inline-block;
+
+    }
+
+
+
+}
