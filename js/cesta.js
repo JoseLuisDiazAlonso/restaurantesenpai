@@ -109,14 +109,22 @@ botonComprar.addEventListener("click", function () {
   let nombre = document.getElementById('nombre').value;
   let apellidos = document.getElementById('apellidos').value;
   let direccion = document.getElementById('direccion').value;
-  let numeroTarjeta = document.getElementById('numeroTarjeta').value;
-  let codigoSeguridad = document.getElementById('codigoSeguridad').value;
+  let telefono = document.getElementById('telefono').value;
+
 
   //Comprobamos que los campos estén cumplimentados.
 
-  if (nombre === '' || apellidos === '' || direccion === '' || numeroTarjeta === '' || codigoSeguridad === '') {
+  if (nombre === '' || apellidos === '' || direccion === '') {
     alert('Todos los campos deben de estar rellenos.');
+    return;
   }
+
+  //limpiamos los campos después de pulsar el botón comprar.
+
+  document.getElementById('nombre').value = '';
+  document.getElementById('apellidos').value = '';
+  document.getElementById('direccion').value = '';
+
 
 
   // Crear una variable para almacenar el contenido del mensaje
@@ -139,6 +147,7 @@ botonComprar.addEventListener("click", function () {
     nombre: nombre,
     apellidos: apellidos,
     direccion: direccion,
+    telefono: telefono,
     message: mensaje
   }, '_JHDOIA_jHwrIGHUc')
     .then(() => {
@@ -147,7 +156,11 @@ botonComprar.addEventListener("click", function () {
     .catch((error) => {
       console.log("error al enviar el mensaje", error)
 
+
+
     })
+
+
 
 
   // Limpiar el local storage
@@ -164,4 +177,16 @@ botonComprar.addEventListener("click", function () {
 
   // Actualizar la cesta
   cesta.innerHTML = "";
+
+
+
+  alert("Compra Realizada");
 });
+
+botonVaciarCesta.addEventListener("click", function () {
+  document.getElementById('nombre').value = '';
+  document.getElementById('apellidos').value = '';
+  document.getElementById('direccion').value = '';
+  document.getElementById('telefono').value = '';
+
+})
