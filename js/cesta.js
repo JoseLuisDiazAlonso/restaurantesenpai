@@ -1,3 +1,4 @@
+
 //A partir del array productosSeleccionados, mostramos dicha información en la cesta, en el HTML.
 
 // Obtenemos el elemento del HTML donde se mostrará la información de la cesta.
@@ -69,7 +70,7 @@ function actualizarTotalCesta() {
   totalCesta.textContent = total.toFixed(2) + "€";
 }
 
-// Path: js/cesta.js
+
 
 // Obtener el botón "vaciar cesta"
 
@@ -94,7 +95,6 @@ botonVaciarCesta.addEventListener("click", function () {
   cesta.innerHTML = "";
 });
 
-// Path: js/cesta.js
 
 // Obtener el botón "comprar"
 
@@ -118,6 +118,28 @@ botonComprar.addEventListener("click", function () {
     alert('Todos los campos deben de estar rellenos.');
     return;
   }
+
+  //Comprobamos que los campos nombre, apellidos y dirección son texto.
+
+  let regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/ //Expresión regular que comprueba que los campos solo sean texto.
+
+  //Condición que se debe de cumplir.
+
+  if (!regex.test(nombre) || !regex.test(apellidos) || !regex.test(direccion)) {
+    alert("Los campos seleccionados solo pueden ser texto.");
+    return;
+  }
+
+  //Comprobamos que el telefono solo contiene números.
+
+  let validarNumero = /^[0-9]+$/
+
+  if (!validarNumero.test(telefono)) {
+    alert("El campo Teléfono solo admite números.");
+    return;
+  }
+
+
 
   //limpiamos los campos después de pulsar el botón comprar.
 
