@@ -148,27 +148,18 @@ li {
         margin-right: 40px;
     }
 
-    .contenedor {
-        /*Centramos todos los elementos del contenedor.*/
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-    }
-
+    .cotenedor,
     .logoJapon,
     .titulo,
-    .redesCesta,
     #cestaCompra {
-        /*Alineamos todos los elementos del header.*/
         display: inline-block;
     }
 
     .logoJapon,
     .titulo,
     .redesCesta {
-        /*Establecemos la separación entre los diferentes elementos.*/
-        margin-left: 140px;
-        margin-right: 140px;
+        margin-left: 60px;
+        margin-right: 60px;
     }
 
     .menu li {
@@ -216,6 +207,6 @@ li {
 
     .pie a {
         margin-left: 50px;
-       
+
     }
 }
