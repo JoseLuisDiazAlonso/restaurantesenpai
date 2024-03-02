@@ -142,28 +142,24 @@ li {
         margin-right: 40px;
     }
 
-    .logoJapon,
-    .titulo,
-    #cestaCompra {
-        /*Establecemos todos los elementos del header en línea.*/
-        display: inline-block;
-    }
-
     .contenedor,
     .logoJapon,
     .titulo,
-    .redesCesta {
-        /*Establecemos una separación lateral entre elementos de tal forma que quede centrado.*/
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-    /*Damos formato a los elementos del menú.*/
-
-    .menu li {
-        /*Distribuimos en línea los elementos del menú.*/
+    #cestaCompra {
         display: inline-block;
     }
+
+    .logoJapon,
+    .titulo,
+    .redesCesta {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+
+    .menu li {
+        display: inline-block;
+    }
+
 
     /*Damos formato a la sección de productos.*/
 
