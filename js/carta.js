@@ -14,7 +14,6 @@ function actualizarContadorCesta() {
 var botonesMas = document.querySelectorAll(".mas");
 var botonesMenos = document.querySelectorAll(".menos");
 
-// Agregar evento de clic a los botones "más" y "menos"
 botonesMas.forEach(function (botonMas, index) {
     botonMas.addEventListener("click", function () {
         var cantidadProducto = document.querySelectorAll(".cantidad_Producto")[index];
@@ -30,15 +29,23 @@ botonesMas.forEach(function (botonMas, index) {
         // Actualizar la cantidad en el HTML
         cantidadProducto.textContent = cantidadActual;
 
-        // Crear un objeto con la cantidad, precio y tipo de producto
-        var productoSeleccionado = {
-            cantidad: cantidadActual,
-            precio: precioProducto.textContent,
-            tipo: tipoProducto
-        };
+        // Verificar si el producto ya existe en la lista
+        var productoExistente = productosSeleccionados.find(function (producto) {
+            return producto.tipo === tipoProducto;
+        });
 
-        // Agregar el objeto al array
-        productosSeleccionados.push(productoSeleccionado);
+        if (productoExistente) {
+            // Si el producto ya existe, actualizar solo la cantidad
+            productoExistente.cantidad = cantidadActual;
+        } else {
+            // Si el producto no existe, agregarlo a la lista
+            var productoSeleccionado = {
+                cantidad: cantidadActual,
+                precio: precioProducto.textContent,
+                tipo: tipoProducto
+            };
+            productosSeleccionados.push(productoSeleccionado);
+        }
 
         //Guardamos la información del array en el local storage.
         localStorage.setItem("productosSeleccionados", JSON.stringify(productosSeleccionados));
@@ -47,6 +54,7 @@ botonesMas.forEach(function (botonMas, index) {
         actualizarContadorCesta();
     });
 });
+
 
 botonesMenos.forEach(function (botonMenos, index) {
     botonMenos.addEventListener("click", function () {
