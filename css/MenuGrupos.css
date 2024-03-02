@@ -145,25 +145,19 @@ deberíamos de poder evitar el scroll lateral.*/
 
   .logoJapon,
   .titulo,
-  .redesCesta {
-    /*Distribuimos los elementos del menú en línea.*/
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-
-  .logoJapon,
-  .titulo,
-  .redesCesta,
   #cestaCompra {
     display: inline-block;
   }
 
+  .logoJapon,
+  .titulo,
+  .redesCesta {
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
   .menu li {
-    /*Distribuimos los elementos del menú en línea.*/
     display: inline-block;
   }
 
