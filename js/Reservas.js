@@ -28,6 +28,29 @@ let formulario = document.getElementById('formulario').addEventListener('submit'
   let ninos = document.getElementById('ninos_reserva').value;
   let comentarios = document.getElementById('comentarios_reservas').value;
 
+  /**Comprobamos la fecha y la hora para evitar que se puedan seleccionar fechas y horas posteriores a la de la cumplimentación del formulario.*/
+
+  let fechaActual = new Date();
+
+  let fechaSeleccionada = new Date(fecha + 'T' + hora);
+
+  /**Comprobamos que la fecha y hora seleccionadas no son posteriores a la actual.  */
+
+  if (fechaSeleccionada < fechaActual) {
+    alert("No se puede seleccionar una fecha y hora anterior a la fecha Actual.");
+    return;
+
+  }
+
+  
+
+  /**Ahora hacemos una comprobación para evitar que el número de niños y adultos sean números negativos. */
+
+  if (ninos <= 0 || adultos <= 0) {
+    alert("No se admiten números negativos o con valor 0.");
+    return;
+  }
+  
   //Comprobamos que los campos obligatorios están cumplimentados.
 
   if (nombre === '' || apellidos === '' || fecha === '' || hora === '' || adultos === '' || ninos === '') {
@@ -39,7 +62,7 @@ let formulario = document.getElementById('formulario').addEventListener('submit'
   let regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/ //Es la expresión regular que determina que el nombre y el apellido son texto.
 
   if (!regex.test(nombre) || !regex.test(apellidos)) {
-    alert("Los campos de nombre y apellidos no pueden contener números.");
+    alert("Los campos de nombre y apellidos solo pueden ser texto");
     return;
   }
 
